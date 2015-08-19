@@ -1,8 +1,8 @@
 # fileUpload v0.0.1
 ## 一个用于ajax图片上传jquery插件
-### 支持的浏览器版本：Firefox,UC，搜狗,360浏览器,Safari4+,Chrome,IOS版Safari和安卓版Webkit,IE9+
+### 支持的浏览器版本：Firefox，UC，搜狗，360浏览器，Safari4+，Chrome，IOS版Safari和安卓版Webkit，IE9+
 ## 插件用法：
-* 1、下载本插件（git clone）
+* 1、下载本插件（git clone git@github.com:hugzh/fileUpload.git）
 * 2、使用插件之前必须先载入jquery库，然后在html页面载入本插件((fileupload/upload.js)，载入插件的CSS文件(fileupload/style.css)
 * 3、选择需要绘制插件的元素对象，调用fileUpload插件，比如:  $('#show').fileUpload('/upload');
     其中，插件参数为后台处理函数的路径--"/upload"
