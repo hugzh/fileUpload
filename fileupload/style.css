@@ -1,0 +1,44 @@
+ html,body{
+    margin:0 auto;
+    height:100%;
+}
+#dragArea{
+    height:240px;
+    width:220px;
+    border:5px dashed #ccc;
+    text-align:center;
+    display:block;
+    overflow:hidden;
+    font-size: 14pt;
+    background-image: url('background-tips.png');
+    background-repeat: no-repeat;
+}
+
+#fileId {
+    width:100%;
+    height:100%;
+    z-index: -100;
+    opacity: 0;
+}
+
+#previewArea {
+    width:200px;
+    min-height: 200px;
+    margin-top: -250px;
+    margin-left: 10px;
+   /* margin-left: 220px;
+    float:left;*/
+}
+
+#fileupload_submitBtn {
+    line-height: 14pt;
+    height:30px;
+    width:60px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .6) inset;
+}
+#show {
+    width:400px;
+    margin: 0 auto;
+}
