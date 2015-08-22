@@ -11,7 +11,7 @@
     });
 ```
     其中，插件第一个参数为后台处理函数的路径--"/upload",第二个参数为回调函数。回调函数的两个回调值分别是：
-    是否上传成功的标志信息status，以及来自服务器的回调文本或对象response。
+    是否上传成功的标志信息status(true或者false)，以及来自服务器的回调文本或对象response。
 * 4、完整的使用demo.html如下：
 ```html 
     <!DOCTYPE html>
