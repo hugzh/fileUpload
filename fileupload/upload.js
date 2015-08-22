@@ -16,7 +16,7 @@
 // 支持的浏览器版本：Firefox,UC，搜狗,360浏览器,Safari4+,Chrome,IOS版Safari和安卓版Webkit,IE9+
 // 作者：Juice Who
 $.fn.extend({          
-  fileUpload:function(url) {           
+  fileUpload:function(url,callback) {           
     var globalFile;
     var canvas = drawCanvas();
     $(this).append(canvas);
@@ -37,7 +37,8 @@ $.fn.extend({
         $('#fileId').val('');
         globalFile = undefined;
         $('#previewArea').html('');
-
+        // 上传完成之后执行回调
+        callback.call(this,responseText.status,responseText.data);
       });
     }); 
    }  
@@ -177,13 +178,15 @@ fileUploadObj.prototype = {
             var callbackData = {};
             if (this.status >= 200 && this.status <300 || this.status === 304) {
                 // 上传成功之后回调函数，返回服务器数据
-               callbackData = this.responseText;
+               callbackData.data = this.responseText;
+               callbackData.status = true;
                callback(callbackData);
             }
             // 失败
             else {
                 alert('上传失败'+this.responseText);
-                callbackData = this.responseText;
+                callbackData.data = this.responseText;
+                callbackData.status = false;
                 callback(callbackData);
             }
         };
